@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        html,
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            /* background-color: #E83F25; */
+            /* background-color: #e65741; */
+            background-color: #34a5e6;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+
+        h2 {
+            margin-bottom: 0;
+            text-align: center;
+            min-width: fit-content;
+            color:aliceblue;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
+            padding-left: min(10rem, 7%);
+        }
+
+        nav span {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            padding: 7px;
+            margin: 3px;
+            border-radius: 3px;
+            cursor: pointer;
+            text-align: center;
+            width: 100px;
+            color: #515353;
+        }
+
+        nav a:hover, nav a.active {
+            color: black;
+        }
+
+        /* nav .panel {
+            padding: 10px;
+            margin: 3px;
+            background-color: #E83F25;
+            border: #7c2121 1px solid;
+            border-radius: 2px;
+            cursor: pointer;
+        } */
+
+        nav a.active {
+            background-color: #f0f8ff;
+            border: #acb7c0 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <nav>
+            <h2>
+                Rikudo!<br/>
+            </h2>
+                <a id="start_2"> Small </a>
+                <a id="start_3"> Medium </a>
+                <a id="start_4"> Large </a>
+                <a id="start_5"> Huge </a>
+                <a id="start_6"> Massive</a>
+        </nav>
+
+        <div id="canvasContainer">
+        </div>
+
+
+    </div>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
