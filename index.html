@@ -31,7 +31,7 @@
             margin-bottom: 0;
             text-align: center;
             min-width: fit-content;
-            color:aliceblue;
+            color: aliceblue;
         }
 
         nav {
@@ -56,7 +56,8 @@
             color: #515353;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover,
+        nav a.active {
             color: black;
         }
 
@@ -73,6 +74,51 @@
             background-color: #f0f8ff;
             border: #acb7c0 1px solid;
         }
+
+        #flowerLayer {
+            z-index: -1;
+            pointer-events: none;
+            position: absolute;
+            top: 0px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            overflow: hidden;
+        }
+
+        #flowerLayer .reward_2,
+        #flowerLayer .reward_3,
+        #flowerLayer .reward_4,
+        #flowerLayer .reward_5,
+        #flowerLayer .reward_6 {
+            position: absolute;
+        }
+
+        #flowerLayer .reward_2::after {
+            content: "🌼";
+            font-size: 14pt;
+        }
+
+        #flowerLayer .reward_3::after {
+            content: "🪻";
+            font-size: 16pt;
+        }
+
+        #flowerLayer .reward_4::after {
+            content: "🌹";
+            font-size: 18pt;
+        }
+
+        #flowerLayer .reward_5::after {
+            content: "🌷";
+            position: absolute;
+            font-size: 22pt;
+        }
+
+        #flowerLayer .reward_6::after {
+            content: "🌻";
+            font-size: 30pt;
+        }
     </style>
 </head>
 
@@ -80,13 +126,13 @@
     <div class="overlay">
         <nav>
             <h2>
-                Rikudo!<br/>
+                Rikudo!<br />
             </h2>
-                <a id="start_2"> Small </a>
-                <a id="start_3"> Medium </a>
-                <a id="start_4"> Large </a>
-                <a id="start_5"> Huge </a>
-                <a id="start_6"> Massive</a>
+            <a id="start_2"> 🌼Small </a>
+            <a id="start_3"> 🪻Medium </a>
+            <a id="start_4"> 🌹Large </a>
+            <a id="start_5"> 🌷Huge </a>
+            <a id="start_6"> 🌻Massive</a>
         </nav>
 
         <div id="canvasContainer">
@@ -94,7 +140,9 @@
 
 
     </div>
-    <script src="bundle.js"></script>
+
+    <div id="flowerLayer"> </div>
+    <script src="dist/bundle.js"></script>
 </body>
 
 </html>
