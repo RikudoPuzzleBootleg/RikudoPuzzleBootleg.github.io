@@ -35,17 +35,37 @@
         }
 
         h2 {
-            margin-bottom: 0;
-            text-align: center;
+            
+            margin-right: 5px;
+
             min-width: fit-content;
-            color: aliceblue;
+
+            writing-mode: vertical-lr;
+            transform: rotate(-180deg);
+            text-align: center;
+
+            font-size: 30pt;
+            letter-spacing: 15pt;
+            margin-top:-15pt;
+            color: #2e2e4d;
+
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: row;
+            justify-content: stretch;
+            margin-left: min(10rem, 7%);
+
         }
 
         nav {
             display: flex;
             flex-direction: column;
             justify-content: stretch;
-            padding-left: min(10rem, 7%);
+            padding: 1rem;
+            background-color: #2e2e4d;
+            border-radius: 8px;
         }
 
         nav span {
@@ -59,13 +79,9 @@
             border-radius: 3px;
             cursor: pointer;
             text-align: center;
-            width: 100px;
+            width: fit-content;
             color: #515353;
-        }
-
-        nav a:hover,
-        nav a.active {
-            color: black;
+            font-size: 20pt;
         }
 
         /* nav .panel {
@@ -107,40 +123,42 @@
         }
 
         #flowerLayer .reward_3::after {
-            content: "🪻";
-            font-size: 16pt;
+            content: "🌹";
+            font-size: 17pt;
         }
 
         #flowerLayer .reward_4::after {
-            content: "🌹";
-            font-size: 18pt;
+            content: "🌷";
+            font-size: 20pt;
         }
 
         #flowerLayer .reward_5::after {
-            content: "🌷";
+            content: "🪻";
             position: absolute;
-            font-size: 22pt;
+            font-size: 24pt;
         }
 
         #flowerLayer .reward_6::after {
             content: "🌻";
-            font-size: 30pt;
+            font-size: 32pt;
         }
     </style>
 </head>
 
 <body>
     <div class="overlay">
-        <nav>
+        <div class="sidebar">
             <h2>
-                Rikudo!<br />
+                Rekudo!
             </h2>
-            <a id="start_2"> 🌼Small </a>
-            <a id="start_3"> 🪻Medium </a>
-            <a id="start_4"> 🌹Large </a>
-            <a id="start_5"> 🌷Huge </a>
-            <a id="start_6"> 🌻Massive</a>
-        </nav>
+            <nav>
+                <a id="start_2">🌼</a>
+                <a id="start_3">🌹</a>
+                <a id="start_4">🌷</a>
+                <a id="start_5">🪻</a>
+                <a id="start_6">🌻</a>
+            </nav>
+        </div>
 
         <div id="canvasContainer">
         </div>
